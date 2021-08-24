@@ -1,1 +1,0 @@
-# [boostcampaitech2](https://github.com/boostcampaitech2)/**[image-classification-level1-16](https://github.com/boostcampaitech2/image-classification-level1-16)**
