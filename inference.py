@@ -27,7 +27,7 @@ def create_label(model, test_dataloader, df_submit, device, target='ans', save=F
 def sum_label(df):
     
     def _label(row):
-        return row['age'] + 3*row['gender'] + 6*row['mask']
+        return row['age'] + 3*row['label']# + 6*row['mask']
 
     df['ans'] = df.apply(_label, axis=1)
     return df[['ImageID', 'ans']]
