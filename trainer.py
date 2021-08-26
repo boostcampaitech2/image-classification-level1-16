@@ -12,6 +12,7 @@ class Trainer:
     def train(self, model, dataloaders, criterion, optimizer, device, num_epochs=20, scheduler=None, save_name='epoch', sub_dir=None):        
 
         save_dir = os.path.join(self.save_dir, sub_dir) if sub_dir is not None else self.save_dir
+        os.makedirs(save_dir, exist_ok=True)
 
         for epoch in range(1, num_epochs+1):
             print('Epoch {}/{}'.format(epoch, num_epochs))
@@ -44,9 +45,7 @@ class Trainer:
                             optimizer.zero_grad()
                             loss.backward()
                             optimizer.step()
-                            if scheduler is not None:
-                                scheduler.step()
-                    
+
                     running_cnt += inputs.size(0)
                     running_loss += loss.item() * inputs.size(0)
                     running_corrects += torch.sum(preds == labels.data)
@@ -58,6 +57,8 @@ class Trainer:
                 print('{} Loss: {:.4f} Acc: {:.4f} F1: {}'.format(phase, epoch_loss, epoch_acc, f1))
 
                 if phase == 'valid':
+                    if scheduler is not None:
+                        scheduler.step()
                     torch.save(model.state_dict(), os.path.join(save_dir, f'{save_name}{epoch:0>3}.pt'))
 
             print()

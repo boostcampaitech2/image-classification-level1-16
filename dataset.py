@@ -53,3 +53,8 @@ def get_age_dataset(df_train1, df_train2, df_valid, df_test, target='age'):
     valid_dataset = MaskTrainDataset(df_valid, transform_valid, target)
     test_dataset = MaskTestDataset(test_path = '/opt/ml/input/data/eval/images', df=df_test, transform=transform_valid)
     return train_dataset, valid_dataset, test_dataset
+
+def get_test_dataset(df_test):
+    transform_train, transform_valid = get_transform()
+    test_dataset = MaskTestDataset(test_path = '/opt/ml/input/data/eval/images', df=df_test, transform=transform_valid)
+    return test_dataset
