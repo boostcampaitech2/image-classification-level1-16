@@ -5,18 +5,18 @@ image-classification-level1-16 created by GitHub Classroom
 
 ### Gender Model
 
-* model :efficientnet-b0  
+* model : efficientnet-b3  
 * train/valid split : 80/20  
 * optimizer : Adam  
-* lr : 0.0003  
+* lr : 0.00006  
 * batch size : 64  
-* augmentation : randaug+cutout  
-* inputsize : 224x224  
+* augmentation : randaug + cutout  
+* inputsize : 300 x 300
 * loss_fn : LabelSmoothing(smoothing=0.05)  
-* epochs : 15  
+* epochs : 6
 
-> train Loss: 0.1371 Acc: 0.9911 F1: 0.9911258239235885  
-> valid Loss: 0.1574 Acc: 0.9868 **F1: 0.9860680087572518**
+> train Loss: 0.1367 Acc: 0.9912 F1: 0.9911 
+> valid Loss: 0.1314 Acc: 0.9944 **F1: 0.9941**
 
 ### Mask Model
 
