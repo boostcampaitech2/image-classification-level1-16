@@ -17,7 +17,7 @@ id,gender,race,age,path
 005435,female,Asian,23,005435_female_Asian_23
 005275,male,Asian,23,005275_male_Asian_23
 006582,female,Asian,20,006582_female_Asian_20
-006362,female,Asian,18,006362_female_Asian_18
+006362,male,Asian,18,006362_female_Asian_18
 001311,female,Asian,34,001311_female_Asian_34
 001590,female,Asian,18,001590_female_Asian_18
 004100,female,Asian,58,004100_female_Asian_58
@@ -361,7 +361,7 @@ id,gender,race,age,path
 000678,female,Asian,52,000678_female_Asian_52
 001821,female,Asian,36,001821_female_Asian_36
 004245,female,Asian,49,004245_female_Asian_49
-006364,female,Asian,18,006364_female_Asian_18
+006364,male,Asian,18,006364_female_Asian_18
 001359-1,female,Asian,24,001359-1_female_Asian_24
 005024,female,Asian,54,005024_female_Asian_54
 001411,male,Asian,26,001411_male_Asian_26

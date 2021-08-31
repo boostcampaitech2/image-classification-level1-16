@@ -654,7 +654,7 @@ id,gender,race,age,path
 001130,male,Asian,23,001130_male_Asian_23
 001729,male,Asian,51,001729_male_Asian_51
 003947,male,Asian,52,003947_male_Asian_52
-006363,female,Asian,18,006363_female_Asian_18
+006363,male,Asian,18,006363_female_Asian_18
 001141,male,Asian,23,001141_male_Asian_23
 005231,male,Asian,19,005231_male_Asian_19
 001555,female,Asian,59,001555_female_Asian_59
@@ -720,12 +720,12 @@ id,gender,race,age,path
 003737,female,Asian,40,003737_female_Asian_40
 003812,male,Asian,52,003812_male_Asian_52
 003505,male,Asian,52,003505_male_Asian_52
-006360,female,Asian,18,006360_female_Asian_18
+006360,male,Asian,18,006360_female_Asian_18
 005489,female,Asian,43,005489_female_Asian_43
 000597,male,Asian,57,000597_male_Asian_57
 003473,male,Asian,52,003473_male_Asian_52
 001517-1,female,Asian,23,001517-1_female_Asian_23
-001720,female,Asian,18,001720_female_Asian_18
+001720,male,Asian,18,001720_female_Asian_18
 006339,female,Asian,18,006339_female_Asian_18
 006737,female,Asian,19,006737_female_Asian_19
 005031,male,Asian,58,005031_male_Asian_58
@@ -1476,7 +1476,7 @@ id,gender,race,age,path
 001233,male,Asian,25,001233_male_Asian_25
 001644,male,Asian,22,001644_male_Asian_22
 004342,male,Asian,58,004342_male_Asian_58
-001498-1,male,Asian,23,001498-1_male_Asian_23
+001498-1,female,Asian,23,001498-1_male_Asian_23
 001740,female,Asian,50,001740_female_Asian_50
 003533,male,Asian,59,003533_male_Asian_59
 000632,female,Asian,54,000632_female_Asian_54
@@ -1924,7 +1924,7 @@ id,gender,race,age,path
 003181,female,Asian,19,003181_female_Asian_19
 001892,female,Asian,52,001892_female_Asian_52
 006924,male,Asian,19,006924_male_Asian_19
-006361,female,Asian,18,006361_female_Asian_18
+006361,male,Asian,18,006361_female_Asian_18
 000381,female,Asian,59,000381_female_Asian_59
 001163,male,Asian,23,001163_male_Asian_23
 003001,female,Asian,19,003001_female_Asian_19
@@ -1933,7 +1933,7 @@ id,gender,race,age,path
 004217,female,Asian,60,004217_female_Asian_60
 004321,female,Asian,59,004321_female_Asian_59
 001217,female,Asian,25,001217_female_Asian_25
-006359,female,Asian,18,006359_female_Asian_18
+006359,male,Asian,18,006359_female_Asian_18
 001347,female,Asian,22,001347_female_Asian_22
 005521,female,Asian,50,005521_female_Asian_50
 001175,male,Asian,60,001175_male_Asian_60
@@ -2097,7 +2097,7 @@ id,gender,race,age,path
 000590,male,Asian,52,000590_male_Asian_52
 000376,female,Asian,59,000376_female_Asian_59
 000661,male,Asian,55,000661_male_Asian_55
-004432,male,Asian,43,004432_male_Asian_43
+004432,female,Asian,43,004432_male_Asian_43
 006443,female,Asian,18,006443_female_Asian_18
 005559,male,Asian,52,005559_male_Asian_52
 006137,male,Asian,19,006137_male_Asian_19
@@ -2131,7 +2131,7 @@ id,gender,race,age,path
 003015,female,Asian,19,003015_female_Asian_19
 000637,female,Asian,50,000637_female_Asian_50
 000609,male,Asian,57,000609_male_Asian_57
-005223,male,Asian,22,005223_male_Asian_22
+005223,female,Asian,22,005223_male_Asian_22
 003885,female,Asian,52,003885_female_Asian_52
 004332,female,Asian,60,004332_female_Asian_60
 001245,female,Asian,23,001245_female_Asian_23
