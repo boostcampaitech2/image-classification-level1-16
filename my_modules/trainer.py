@@ -57,7 +57,7 @@ class Trainer:
                 epoch_acc = running_corrects.double() / running_cnt
                 f1 = f1_score(y_true, y_pred, average='macro')
 
-                print('{} Loss: {:.4f} Acc: {:.4f} F1: {}'.format(phase, epoch_loss, epoch_acc, f1))
+                print('{} Epoch: {} Loss: {:.4f} Acc: {:.4f} F1: {}'.format(phase, epoch, epoch_loss, epoch_acc, f1))
 
                 if phase == 'valid':
                     if f1 > best_score:
