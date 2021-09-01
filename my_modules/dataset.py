@@ -49,7 +49,7 @@ class ClusterTestDataset(Dataset):
         img = Image.open(self.df.iloc[idx]['path'])
         img = self.transform(img)
         return img
-
+    
 # def get_dataset(df_train, df_valid, df_test, target='label'):
 #     transform_train, transform_valid = get_transform()
 #     train_dataset = MaskTrainDataset(df_train, transform_train, target)
