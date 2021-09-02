@@ -70,4 +70,4 @@ class Trainer:
             print()
 
         print('Training complete!')
-        print('Best f1 score {:4f} at epoch {}'.format(best_score, epoch))
+        print('Best f1 score {:4f} at epoch {}'.format(best_score, best_epoch))
