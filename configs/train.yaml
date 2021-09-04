@@ -1,0 +1,98 @@
+targets:
+  - 'age'
+  - 'gender'
+  - 'mask'
+
+trainer:
+  train_csv_path: 'df/valid/df_valid_20.csv'  # '/opt/ml/input/data/train/train.csv'
+  train_img_path: '/opt/ml/input/data/train/images/'
+  weight_save_path : 'save/'
+  seed: 42
+
+ensemble_default: &ensemble_default
+
+  model: 'efficientnet-b0'
+
+  fold:
+    n_splits: 2
+    age_bins: [0, 29, 59, 100]
+
+  transform:
+    crop_size: 350
+    cutout_size: 100
+
+  sampler_size: 0.25
+
+  dataloader:
+    batch_size: 64
+    num_workers: 2
+    
+  optimizer:
+    name: 'Adam'
+    parameters:
+      lr: 0.00006
+      
+  criterion:
+    name: 'LabelSmoothing'
+    parameters:
+      smoothing: 0.05
+
+  train:
+    max_epoch: 1
+    patience: 0
+
+  weight_save_dir_prefix: ensemble_
+
+ensemble_with_pseudo_default: &ensemble_with_pseudo_default
+
+  model: 'efficientnet-b0'
+
+  fold:
+    n_splits: 2
+    age_bins: [0, 29, 59, 100]
+
+  transform:
+    crop_size: 350
+    cutout_size: 100
+
+  sampler_size: 0.25
+
+  dataloader:
+    batch_size: 64
+    num_workers: 2
+    
+  optimizer:
+    name: 'Adam'
+    parameters:
+      lr: 0.00006
+      
+  criterion:
+    name: 'LabelSmoothing'
+    parameters:
+      smoothing: 0.05
+
+  train:
+    max_epoch: 1
+    patience: 0
+
+  weight_save_dir_prefix: pseudo_
+
+ensemble_age:
+  <<: *ensemble_default
+  fold:
+    n_splits: 2
+    age_bins: [0, 29, 57, 100]
+
+ensemble_gender: *ensemble_default
+
+ensemble_mask: *ensemble_default
+
+ensemble_with_pseudo_age:
+  <<: *ensemble_with_pseudo_default
+  fold:
+    n_splits: 2
+    age_bins: [0, 29, 59, 100]
+
+ensemble_with_pseudo_gender: *ensemble_with_pseudo_default
+
+ensemble_with_pseudo_mask: *ensemble_with_pseudo_default
