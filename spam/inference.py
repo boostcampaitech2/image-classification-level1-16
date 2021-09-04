@@ -82,7 +82,6 @@ class Inferencer:
                 probs.append(np.concatenate(prob, axis=0))
             
         ensembled_prob = np.mean(probs, axis=0)
-        print(ensembled_prob)
         soft_vote = ensembled_prob.argmax(axis=-1)
         idx_filtered = np.nonzero(np.any(ensembled_prob >= np.array(config['threshold']), axis=1))[0]
 
