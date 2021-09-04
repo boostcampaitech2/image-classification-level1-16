@@ -2,7 +2,7 @@ import os
 from torch.utils.data import Dataset
 from PIL import Image
 
-class TrainDataset(Dataset):
+class MaskTrainDataset(Dataset):
 
     def __init__(self, df, transform, target):
         self.df = df
@@ -19,18 +19,17 @@ class TrainDataset(Dataset):
         image = self.transform(image)
         return image, label
 
-class EvalDataset(Dataset):
+class MaskEvalDataset(Dataset):
 
     def __init__(self, df, transform):
         self.df = df
         self.transform = transform
-        self.img_path = '/opt/ml/input/data/eval/images'
 
     def __len__(self):
         return len(self.df)
 
     def __getitem__(self, index):
-        image_path = os.path.join(self.img_path, self.df['ImageID'].iloc[index])
+        image_path = self.df['path'].iloc[index]
         image = Image.open(image_path)
         image = self.transform(image)
         return image    
@@ -49,7 +48,7 @@ class ClusterTestDataset(Dataset):
         img = Image.open(self.df.iloc[idx]['path'])
         img = self.transform(img)
         return img
-
+    
 # def get_dataset(df_train, df_valid, df_test, target='label'):
 #     transform_train, transform_valid = get_transform()
 #     train_dataset = MaskTrainDataset(df_train, transform_train, target)
